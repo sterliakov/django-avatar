@@ -9,8 +9,12 @@ from django.core.files import File
 from django.core.files.base import ContentFile
 from django.core.files.storage import get_storage_class
 from django.utils.module_loading import import_string
-from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import force_text
+from django.utils.translation import gettext_lazy as _
+try:
+    from django.utils.encoding import force_text
+except ImportError:
+    from django.utils.encoding import force_str as force_text
+
 from django.db.models import signals
 
 from avatar.conf import settings
