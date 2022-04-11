@@ -61,6 +61,7 @@ setup(
             'templates/avatar/*.html',
             'locale/*/LC_MESSAGES/*',
             'media/avatar/img/default.jpg',
+            'static/avatar/img/default.jpg',
         ],
     },
     install_requires=[
